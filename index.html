@@ -269,7 +269,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 
 /* MODAL TÉRMINOS */
 #modal-terminos {
-  display:flex;
+  display:none;
   position:fixed;
   top:0;left:0;width:100%;height:100%;
   background:rgba(0,0,0,.75);
@@ -5726,15 +5726,22 @@ function aceptarTerminos() {
 }
 
 (function checkTerminos() {
-  try {
-    var aceptado = localStorage.getItem(TERMINOS_KEY);
-    if (!aceptado) {
+  function _check() {
+    try {
+      var aceptado = localStorage.getItem(TERMINOS_KEY);
+      if (!aceptado) {
+        var m = document.getElementById('modal-terminos');
+        if (m) m.style.display = 'flex';
+      }
+    } catch(e) {
       var m = document.getElementById('modal-terminos');
       if (m) m.style.display = 'flex';
     }
-  } catch(e) {
-    var m = document.getElementById('modal-terminos');
-    if (m) m.style.display = 'flex';
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', _check);
+  } else {
+    _check();
   }
 })();
 </script></body></html>

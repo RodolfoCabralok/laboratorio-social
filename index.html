@@ -366,7 +366,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
     <p>Los datos que el usuario ingresa en la aplicaci&#xF3;n <strong style="color:var(--white)">no se almacenan en ning&#xFA;n servidor</strong>. Todo el procesamiento ocurre localmente en el navegador del usuario. El autor no tiene acceso a ning&#xFA;n dato personal ni acad&#xE9;mico ingresado.</p>
 
     <h3>Contacto</h3>
-    <p>Para consultas, autorizaciones o colaboraciones institucionales, contactar al autor en: <a href="mailto:rodocabral@gmail.com" style="color:var(--accent2);text-decoration:none">rodocabral@gmail.com</a></p>
+    <p>Para consultas, autorizaciones o colaboraciones institucionales, contactar al autor en: <a href="/cdn-cgi/l/email-protection#770518131814161505161b37101a161e1b5914181a" style="color:var(--accent2);text-decoration:none"><span class="__cf_email__" data-cfemail="d0a2bfb4bfb3b1b2a2b1bc90b7bdb1b9bcfeb3bfbd">[email&#160;protected]</span></a></p>
 
     <div class="modal-footer">
       <em>Al continuar usando esta aplicaci&#xF3;n, acept&#xE1;s estos t&#xE9;rminos.</em><br>
@@ -1252,7 +1252,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
   <p style="font-size:.78rem;color:var(--gray);font-style:italic">
     &copy; 2025 Prof. Luis Rodolfo Cabral &mdash; Laboratorio de Investigaci&#xF3;n Social<br>
     Herramienta de uso educativo &mdash; Metodolog&#xED;a de la Investigaci&#xF3;n II &mdash; Trabajo Social<br>
-    <a href="mailto:rodocabral@gmail.com" style="color:var(--accent2);text-decoration:none">rodocabral@gmail.com</a>
+    <a href="/cdn-cgi/l/email-protection#9ceef3f8f3fffdfeeefdf0dcfbf1fdf5f0b2fff3f1" style="color:var(--accent2);text-decoration:none"><span class="__cf_email__" data-cfemail="3b49545f54585a59495a577b5c565a525715585456">[email&#160;protected]</span></a>
     &nbsp;&middot;&nbsp;
     <button onclick="document.getElementById('modal-terminos').style.display='flex'" 
       style="background:none;border:none;color:var(--accent2);cursor:pointer;font-size:.78rem;font-family:Inter,system-ui,sans-serif;text-decoration:underline;padding:0">
@@ -1459,7 +1459,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 <div id="nav-tooltip"></div>
 <div id="toast">✅ Listo</div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ---- NAV ----
 function go(id, btn) {
   document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('on'); });
@@ -5109,7 +5109,7 @@ function _calcTStudentGroups(g1, g2, g1n, g2n, varNum) {
   return { t:t.toFixed(3), df:df, p:p.toFixed(4),
     mean1:mean1.toFixed(2), mean2:mean2.toFixed(2),
     sd1:Math.sqrt(var1).toFixed(2), sd2:Math.sqrt(var2).toFixed(2),
-    n1:g1.length, n2:g2.length, g1:g1n, g2:g2n, varNum:varNum };
+    n1:g1.length, n2:g2.length, g1:g1n, g2:g2n, varNum:varNum, varGrupo: g1n + ' / ' + g2n };
 }
 
 function generarPerfilComparativo(g1n, g2n) {
@@ -5704,14 +5704,4 @@ function triggerAutosave() {
 
 // ── MODAL TÉRMINOS DE USO ──────────────────────────────────────────────
 function cerrarModal() {
-  document.getElementById('modal-terminos').style.display = 'none';
-  try { localStorage.setItem('lab_terminos_ok', '1'); } catch(e){}
-}
-(function() {
-  var accepted = false;
-  try { accepted = localStorage.getItem('lab_terminos_ok') === '1'; } catch(e){}
-  if (accepted) { var m = document.getElementById('modal-terminos'); if (m) m.style.display = 'none'; }
-})();
-</script>
-</body>
-</html>
+  documen
